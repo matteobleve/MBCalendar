@@ -1,2 +1,2 @@
 # MBCalendar
-Simple calendar with planning and events
+Simple calendar in JavaScript with planning and events
