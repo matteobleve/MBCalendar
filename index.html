@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head><link rel="stylesheet" href="mbcalendar.css"> </head>
+	<body style="padding:40px;">
+		<div id="calendar"></div> 		
+		<script src="script.js"></script>
+		<script>
+			var today = "2021-06-10";
+			var calendar = new MBCalendar({
+				element: document.getElementById('calendar'),
+				startMonday: 1,
+				//today: today,
+				ajax: {
+					url: "/calendar/datecall.php?from={{$from}}&to={{$to}}",
+					csrToken: "sdjhfhhu432nndjw"
+				},
+				labels: {
+					months: ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre" ],
+					days: ["Dom", "Lun", "Mar", "Mer", "Gio", "Ven", "Sab" ],
+					today: "Oggi"
+				}
+			});
+		</script>		
+		
+	</body>
+</html>
